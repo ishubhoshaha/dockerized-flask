@@ -3,6 +3,7 @@ version: "3.3"
 services:
 
   flask:
+    image: ishubhoshaha/dockerized_flask:latest
     build: ./flask
     container_name: flask
     restart: always
@@ -12,6 +13,7 @@ services:
       - 8080
 
   nginx:
+    image: ishubhoshaha/dockerized_flask:latest
     build: ./nginx
     container_name: nginx
     restart: always
