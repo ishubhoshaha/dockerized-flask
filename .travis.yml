@@ -19,4 +19,5 @@ before_script:
 
 after_success:
   - echo "$DOCKER_HUB_PASS" | docker login -u "$DOCKER_ID" --password-stdin
+  - docker push ishubhoshaha/dockerized_flaskapp
 
