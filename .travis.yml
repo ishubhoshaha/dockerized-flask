@@ -21,15 +21,14 @@ after_success:
   - echo "$DOCKER_HUB_PASS" | docker login -u "$DOCKER_ID" --password-stdin
   - docker push ishubhoshaha/dockerized_flask:latest
 
-
-  deploy:
-    provider: elasticbeanstalk
-    region: us-east-1
-    app: dockerized-flask
-    env: DockerizedFlask-env
-    bucket_name: elasticbeanstalk-us-east-1-247663245731
-    bucket_path: dockerized_flask
-    on:
-      branch: master
-    access_key_id: $AWS_ACCESS_KEY
-    secret_access_key: $AWS_SECRET_ACCESS_KEY 
+deploy:
+  provider: elasticbeanstalk
+  region: us-east-1
+  app: dockerized-flask
+  env: DockerizedFlask-env
+  bucket_name: elasticbeanstalk-us-east-1-247663245731
+  bucket_path: dockerized_flask
+  on:
+    branch: master
+  access_key_id: $AWS_ACCESS_KEY
+  secret_access_key: $AWS_SECRET_ACCESS_KEY
