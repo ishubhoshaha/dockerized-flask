@@ -23,13 +23,7 @@
             "name": "nginx",
             "image": "ishubhoshaha/dockerized_flask:latest",
             "essential": false,
-            "memory": 500,
-            "portMappings": [
-                {
-                    "hostPort": 80,
-                    "containerPort": 80
-                }
-            ]
+            "memory": 500
         }
     ]
 }
