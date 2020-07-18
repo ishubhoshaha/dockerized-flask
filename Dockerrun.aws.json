@@ -1,0 +1,35 @@
+{
+    "AWSEBDockerrunVersion": 2,
+    "containerDefinitions": [
+        {
+            "name": "flask",
+            "image": "ishubhoshaha/dockerized_flask:latest",
+            "environment": [
+                {
+                    "name": "APP_NAME",
+                    "value": "MyFlaskApp"
+                }
+            ],
+            "essential": false,
+            "memory": 500,
+            "portMappings": [
+                {
+                    "hostPort": 80,
+                    "containerPort": 8080
+                }
+            ]
+        },
+        {
+            "name": "nginx",
+            "image": "ishubhoshaha/dockerized_flask:latest",
+            "essential": false,
+            "memory": 500,
+            "portMappings": [
+                {
+                    "hostPort": 80,
+                    "containerPort": 80
+                }
+            ]
+        }
+    ]
+}
