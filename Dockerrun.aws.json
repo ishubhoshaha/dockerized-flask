@@ -10,7 +10,7 @@
                     "value": "MyFlaskApp"
                 }
             ],
-            "essential": false,
+            "essential": true,
             "memory": 500,
             "portMappings": [
                 {
